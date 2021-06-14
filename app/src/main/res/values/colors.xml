@@ -17,4 +17,7 @@
     <color name="deep_purple_100">#d1c4e9</color>
     <color name="deep_purple_100_light">#fff7ff</color>
     <color name="deep_purple_100_dark">#a094b7</color>
+    <color name="third_status_bar_color">#78DD62</color>
+    <color name="fourth_status_bar_color">#43978C</color>
+    <color name="fifth_status_bar_color">#3E0000</color>
 </resources>
