@@ -56,7 +56,6 @@ class QuizFragment: Fragment() {
 
         binding.radioGroup.setOnCheckedChangeListener { group, checkedId ->
             answers[quizPosition ?: 0] = view.findViewById<RadioButton>(checkedId).text.toString()
-            Toast.makeText(activity, answers.contentToString(), Toast.LENGTH_SHORT).show()
             binding.nextButton.isEnabled = true
         }
     }
