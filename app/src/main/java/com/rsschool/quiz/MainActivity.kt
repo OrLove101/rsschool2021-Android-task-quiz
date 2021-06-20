@@ -122,10 +122,11 @@ class MainActivity : AppCompatActivity(), QuizFragment.QuizCommunicator,
     }
 
     private fun openResultFragment() {
-        supportFragmentManager.popBackStack(0, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        //supportFragmentManager.popBackStack(0, FragmentManager.POP_BACK_STACK_INCLUSIVE)
         supportFragmentManager.beginTransaction()
-            .replace(R.id.container, ResultFragment.newInstance(mAnswers))
+            .replace(R.id.container, ResultFragment.newInstance(mAnswers), "Result")
             .commit()
+
     }
 
     companion object {
@@ -135,6 +136,10 @@ class MainActivity : AppCompatActivity(), QuizFragment.QuizCommunicator,
 
     override fun onBackPressed() {
         fragments.forEach { if ( it.isAdded ) questionsAnswered-- }
+        if ( supportFragmentManager.findFragmentByTag("Result")?.isAdded == true ) {
+            finish()
+        }
+
         super.onBackPressed()
     }
 

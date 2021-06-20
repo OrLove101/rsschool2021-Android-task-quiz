@@ -117,7 +117,7 @@ class QuizFragment: Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
+    
     companion object {
         fun newInstance(content: QuizItem, isFirst: Boolean, isLast: Boolean,
                         answers: Array<String?>, quizPosition: Int): QuizFragment {
